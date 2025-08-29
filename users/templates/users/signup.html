@@ -1,0 +1,10 @@
+{% extends 'learning_log_app/base.html' %}
+{% block content %}
+   <h1>SignUp</h1>
+   <form action="{% url 'users:signup' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button name="submit">SignUp</button>
+        <input type="hidden" name="next" value="{% url 'learning_log_app:home' %}" />
+   </form>
+{% endblock content %}

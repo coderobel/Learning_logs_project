@@ -1,0 +1,1 @@
+web: gunicorn learning_log_project.wsgi
